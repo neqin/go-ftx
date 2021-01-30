@@ -1,12 +1,12 @@
 package rest
 
 import (
-	"github.com/go-numb/go-ftx/rest/private/account"
-	"github.com/go-numb/go-ftx/rest/private/fills"
-	"github.com/go-numb/go-ftx/rest/private/funding"
-	"github.com/go-numb/go-ftx/rest/private/orders"
-	"github.com/go-numb/go-ftx/rest/private/subaccount"
-	"github.com/go-numb/go-ftx/rest/private/wallet"
+	"github.com/neqin/go-ftx/rest/private/account"
+	"github.com/neqin/go-ftx/rest/private/fills"
+	"github.com/neqin/go-ftx/rest/private/funding"
+	"github.com/neqin/go-ftx/rest/private/orders"
+	"github.com/neqin/go-ftx/rest/private/subaccount"
+	"github.com/neqin/go-ftx/rest/private/wallet"
 )
 
 func (p *Client) Information(req *account.RequestForInformation) (*account.ResponseForInformation, error) {
