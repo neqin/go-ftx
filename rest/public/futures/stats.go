@@ -12,6 +12,10 @@ type RequestForStats struct {
 
 type ResponseForStats Stats
 
+/*
+{"impliedVolatility":1.3356387615203857,"delta":-0.09478103596922183,"gamma":0.00012176595605819894},"openInterest":260.2345}
+*/
+
 type StatsList []Stats
 type Stats struct {
 	Name                     string  `json:"name,omitempty"`
@@ -21,7 +25,12 @@ type Stats struct {
 	PredictedExpirationPrice float64 `json:"predictedExpirationPrice"`
 	StrikePrice              float64 `json:"strikePrice"`
 	OpenInterest             float64 `json:"openInterest"`
-
+	Greeks                   struct {
+		ImpliedVolatility float64 `json:"impliedVolatility"`
+		Delta             float64 `json:"delta"`
+		Gamma             float64 `json:"gamma"`
+		OpenInterest      float64 `json:"openInterest"`
+	} `json:"greeks"`
 	NextFundingTime time.Time `json:"nextFundingTime"`
 }
 
